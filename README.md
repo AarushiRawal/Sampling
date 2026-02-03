@@ -45,33 +45,40 @@ This project explores how different sampling strategies impact model performance
 
 ### Accuracy Comparison Across Sampling Techniques
 
-![Accuracy Bar Plot](accuracy_barplt.png)
+![Accuracy Bar Plot](accuracy_barplt(1).png)
 
 ---
 
 ### Average Accuracy per Sampling Technique
 
-![Average Sampling Accuracy](avg_sampling_accuracy.png)
+![Average Sampling Accuracy](avg_sampling_accuracy(1).png)
 
 ---
+## Model Accuracy Comparison
+
+| Model                  | Random | Stratified | Systematic | Cluster | Bootstrap |
+|------------------------|--------|------------|------------|----------|-----------|
+| Logistic Regression    | 93.73 | 92.08    | 91.27     | 98.18  | 90.19    |
+| Decision Tree          | 97.00 | 97.54     | 94.76     | 99.09   | 97.28    |
+| Random Forest          | 99.18 | 99.73     | 99.13    | 99.09   | 99.18    |
+| SVM                    | 97.55 | 97.81     | 98.69     | 100.00  | 96.73    |
+| KNN                    | 92.92 | 93.17    | 90.39     | 92.73   | 91.83    |
+
 
 ## Key Observations
--Cluster Sampling yielded the highest overall average accuracy among all sampling techniques. This suggests that grouping similar transactions before sampling can enhance model learning by preserving underlying data structure.
+-Cluster Sampling consistently produced the highest accuracy across most models, achieving peak performance for Logistic Regression, Decision Tree, and SVM. This suggests that grouping structurally similar data points improved model learning.
 
--Bootstrap Sampling demonstrated consistently strong performance, indicating that sampling with replacement can provide stable training subsets and improve model generalization.
+-Random Forest demonstrated the most stable and highest overall performance, maintaining accuracy above 99% across all sampling techniques. This confirms the robustness of ensemble learning methods to variations in data sampling.
 
--Stratified Sampling maintained class balance effectively and produced reliable results, particularly for ensemble-based models such as Random Forest and Decision Tree.
+-SVM achieved 100% accuracy under Cluster Sampling, indicating strong class separability within selected clusters. However, such perfect accuracy may also indicate potential overfitting.
 
--Systematic Sampling showed moderate performance, with relatively better outcomes for Logistic Regression and KNN. However, its effectiveness may depend on the original ordering of the dataset.
+-Stratified Sampling produced consistently strong results, especially for Random Forest and SVM, highlighting its effectiveness in maintaining class distribution balance.
 
--Random Sampling resulted in the lowest overall accuracy, highlighting that purely random subset selection may fail to preserve meaningful data patterns in fraud detection tasks.
+-Systematic Sampling performed competitively, particularly for SVM and Random Forest, showing that ordered selection did not negatively impact model performance in this case.
 
--The Decision Tree model achieved 100% accuracy under Cluster Sampling, which may indicate overfitting due to highly homogeneous cluster-based subsets.
+-Bootstrap Sampling showed stable but slightly lower performance compared to Cluster and Stratified sampling, though it still maintained high accuracy levels across models.
 
--Random Forest exhibited the most stable performance across different sampling techniques, demonstrating robustness to variations in data selection strategy.
-
--The SVM model consistently showed comparatively lower accuracy, possibly due to sensitivity to dataset size, feature scaling, and class distribution characteristics.
-
+-KNN showed comparatively lower performance than other models, suggesting sensitivity to sampling structure and feature distribution.
 
 ## Author
 
