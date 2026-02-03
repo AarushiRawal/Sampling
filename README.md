@@ -56,13 +56,21 @@ This project explores how different sampling strategies impact model performance
 ---
 
 ## Key Observations
+-Cluster Sampling yielded the highest overall average accuracy among all sampling techniques. This suggests that grouping similar transactions before sampling can enhance model learning by preserving underlying data structure.
 
-- **Stratified sampling** maintained class balance and produced stable performance.
-- **Cluster sampling** performance depended on representativeness of selected clusters.
-- **Bootstrap sampling** introduced variance but performed competitively.
-- **Random Forest** showed the most consistent performance across sampling methods.
-- **Logistic Regression** performed reliably after feature scaling.
+-Bootstrap Sampling demonstrated consistently strong performance, indicating that sampling with replacement can provide stable training subsets and improve model generalization.
 
+-Stratified Sampling maintained class balance effectively and produced reliable results, particularly for ensemble-based models such as Random Forest and Decision Tree.
+
+-Systematic Sampling showed moderate performance, with relatively better outcomes for Logistic Regression and KNN. However, its effectiveness may depend on the original ordering of the dataset.
+
+-Random Sampling resulted in the lowest overall accuracy, highlighting that purely random subset selection may fail to preserve meaningful data patterns in fraud detection tasks.
+
+-The Decision Tree model achieved 100% accuracy under Cluster Sampling, which may indicate overfitting due to highly homogeneous cluster-based subsets.
+
+-Random Forest exhibited the most stable performance across different sampling techniques, demonstrating robustness to variations in data selection strategy.
+
+-The SVM model consistently showed comparatively lower accuracy, possibly due to sensitivity to dataset size, feature scaling, and class distribution characteristics.
 
 
 ## Author
