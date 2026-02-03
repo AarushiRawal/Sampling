@@ -1,6 +1,4 @@
-#Sampling Techniques on Machine Learning Models  
-### Credit Card Fraud Detection Case Study
-
+### Sampling techniques on ML models
 This project evaluates how different statistical sampling techniques influence the performance of machine learning models on an imbalanced credit card fraud dataset.
 
 ---
