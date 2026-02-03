@@ -10,7 +10,7 @@ This project explores how different sampling strategies impact model performance
 
 ---
 
-## ⚙️ Dataset
+## Dataset
 
 - Source: Credit Card Fraud Dataset
 - Binary Classification:
