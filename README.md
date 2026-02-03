@@ -45,13 +45,13 @@ This project explores how different sampling strategies impact model performance
 
 ### Accuracy Comparison Across Sampling Techniques
 
-![Accuracy Bar Plot](accuracy_barplot.png)
+![Accuracy Bar Plot](accuracy_barplt.png)
 
 ---
 
 ### Average Accuracy per Sampling Technique
 
-![Average Sampling Accuracy](average_sampling_accuracy.png)
+![Average Sampling Accuracy](avg_sampling_accuracy.png)
 
 ---
 
