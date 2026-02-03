@@ -68,5 +68,3 @@ This project explores how different sampling strategies impact model performance
 ## Author
 
 Aarushi Rawal  
-
-⭐ If you found this project interesting, feel free to star the repository!
